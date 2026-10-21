@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete seu cadastro | Supernovo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header class="brand" aria-label="Supernovo Balcão Atacado">
+        <span class="brand-name">Supernovo</span>
+        <span class="brand-subtitle">Balcão Atacado</span>
+    </header>
+    <main class="profile-card" hidden>
+        <aside class="profile-intro">
+            <span class="step-label">ETAPA 2 DE 2</span>
+            <h1>Falta pouco!</h1>
+            <p>Complete seu endereço para deixar sua conta pronta.</p>
+            <div class="account-info">
+                <p><strong>Nome:</strong> <span id="account-name"></span></p>
+                <p><strong>E-mail:</strong> <span id="account-email"></span></p>
+            </div>
+        </aside>
+        <section class="profile-content">
+            <h2>Seu endereço</h2>
+            <p class="profile-description">Informe os dados abaixo. Você pode atualizá-los depois.</p>
+            <form id="address-form">
+                <div class="address-grid">
+                    <label>CEP<input name="postalCode" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000" maxlength="9" pattern="[0-9]{5}-?[0-9]{3}" required></label>
+                    <label>Estado<select name="state" autocomplete="address-level1" required><option value="">Selecione</option></select></label>
+                    <label class="full-width">Endereço<input name="street" autocomplete="address-line1" placeholder="Rua, avenida ou travessa" maxlength="150" required></label>
+                    <label>Número<input name="number" placeholder="Ex.: 123 ou S/N" maxlength="20" required></label>
+                    <label>Complemento <small>(opcional)</small><input name="complement" autocomplete="address-line2" placeholder="Apartamento, bloco…" maxlength="100"></label>
+                    <label>Bairro<input name="district" autocomplete="address-level3" placeholder="Seu bairro" maxlength="100" required></label>
+                    <label>Cidade<input name="city" autocomplete="address-level2" placeholder="Sua cidade" maxlength="100" required></label>
+                </div>
+                <button type="submit" class="primary-button">Salvar cadastro</button>
+                <p id="address-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+        <section class="welcome-screen" hidden aria-labelledby="welcome-title">
+            <div class="welcome-check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"/></svg></div>
+            <span class="welcome-eyebrow">CADASTRO CONCLUÍDO</span>
+            <h2 id="welcome-title" tabindex="-1">Bem-vindo ao Supernovo!</h2>
+            <p>Confira nossas ofertas e aproveite o melhor do Balcão Atacado clicando no botão abaixo.</p>
+            <button type="button" class="primary-button" id="offers-button">Ver ofertas <span aria-hidden="true">→</span></button>
+            <p id="offers-message" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="account.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

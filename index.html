@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela Login</title>
+</head>
+<body>
+
+    <header class="brand" aria-label="Supernovo Balcão Atacado">
+        <span class="brand-name">Supernovo</span>
+        <span class="brand-subtitle">Balcão Atacado</span>
+    </header>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Criar Conta</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon" aria-label="Continuar com Google" title="Continuar com Google"><i class="fa-brands fa-google" aria-hidden="true"></i></a>
+                    <a href="#" class="icon" aria-label="Continuar com Apple" title="Continuar com Apple"><i class="fa-brands fa-apple" aria-hidden="true"></i></a>
+                    <a href="#" class="icon" aria-label="Continuar com Facebook" title="Continuar com Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                </div>
+                <span>Use seu E-mail para se Registrar</span>
+                <input type="text" name="name" placeholder="Nome" aria-label="Nome" autocomplete="name" maxlength="100" required>
+                <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" autocomplete="email" required>
+                <input type="password" name="password" placeholder="Senha" aria-label="Senha" required>
+                <button>Inscreva-se</button><p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Entrar</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon" aria-label="Continuar com Google" title="Continuar com Google"><i class="fa-brands fa-google" aria-hidden="true"></i></a>
+                    <a href="#" class="icon" aria-label="Continuar com Apple" title="Continuar com Apple"><i class="fa-brands fa-apple" aria-hidden="true"></i></a>
+                    <a href="#" class="icon" aria-label="Continuar com Facebook" title="Continuar com Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                </div>
+                    <span>Use seu E-mail e Senha</span>
+                    <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" autocomplete="email" required>
+                    <input type="password" name="password" placeholder="Senha" aria-label="Senha" required>
+                    <a href="#" style ="text-decoration:underline">Esqueci minha senha</a>
+                    <button>Entrar</button><p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Fazer Login</h1>
+                    <p>Que bom ter você de volta!</p>
+                        <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Olá, Amigo!</h1>
+                    <p>Registre-se para usar
+                        todos os recursos do site.</p>
+                    <button class="hidden" id="register">Registre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="account.js"></script><script src="script.js"></script>
+</body>
+
+</html>
